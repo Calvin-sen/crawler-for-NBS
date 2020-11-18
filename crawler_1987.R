@@ -44,5 +44,5 @@ heilongjiang_1987_1 <-
   subset(
           table_1987_2,   
           table_1987_2[,3]==23 & (table_1987_2[,5]=="00" | table_1987_2[,4]=="90")
-  )
+        )
 heilongjiang_1987 <- heilongjiang_1987_1[,-c(3,4,5)]
