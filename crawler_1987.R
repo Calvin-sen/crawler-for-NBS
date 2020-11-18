@@ -16,37 +16,33 @@ city <- str_sub(table_1987_1[,1], 5, 6) #选取最后两位以区分地级市
 table_1987_2 <- data.frame(table_1987_1, prov, prov_coun, city)
 
 #河北省1987年数据#
-hebei_1987_1 <- subset(
-  
-  table_1987_2, table_1987_2[,3]==13
-  &(table_1987_2[,5]=="00"|table_1987_2[,4]=="90")
-
-)
+hebei_1987_1 <- 
+  subset(
+          table_1987_2, 
+          table_1987_2[,3]==13 & (table_1987_2[,5]=="00" | table_1987_2[,4]=="90")
+        )
 hebei_1987 <- hebei_1987_1[,-c(3,4,5)]
 
 #辽宁省1987年数据#
-liaoning_1987_1 <- subset(
-  
-  table_1987_2, table_1987_2[,3]==21
-  &(table_1987_2[,5]=="00"|table_1987_2[,4]=="90")
-
-)
+liaoning_1987_1 <- 
+  subset(
+          table_1987_2, 
+          table_1987_2[,3]==21 & (table_1987_2[,5]=="00" | table_1987_2[,4]=="90")
+        )
 liaoning_1987 <- liaoning_1987_1[,-c(3,4,5)]
 
 #吉林省1987年数据#
-jilin_1987_1 <- subset(
-  
-  table_1987_2, table_1987_2[,3]==22
-  &(table_1987_2[,5]=="00"|table_1987_2[,4]=="90")
-  
-)
+jilin_1987_1 <- 
+  subset(
+          table_1987_2, 
+          table_1987_2[,3]==22 & (table_1987_2[,5]=="00" | table_1987_2[,4]=="90")
+        )
 jilin_1987 <- jilin_1987_1[,-c(3,4,5)]
 
 #黑龙江省1987年数据#
-heilongjiang_1987_1 <- subset(
-  
-  table_1987_2, table_1987_2[,3]==23
-  &(table_1987_2[,5]=="00"|table_1987_2[,4]=="90")
-  
-)
+heilongjiang_1987_1 <- 
+  subset(
+          table_1987_2,   
+          table_1987_2[,3]==23 & (table_1987_2[,5]=="00" | table_1987_2[,4]=="90")
+  )
 heilongjiang_1987 <- heilongjiang_1987_1[,-c(3,4,5)]
